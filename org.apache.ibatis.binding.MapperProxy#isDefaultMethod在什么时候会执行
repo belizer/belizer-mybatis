@@ -1,0 +1,8 @@
+ private boolean isDefaultMethod(Method method) {
+    return ((method.getModifiers()
+        & (Modifier.ABSTRACT | Modifier.PUBLIC | Modifier.STATIC)) == Modifier.PUBLIC)
+        && method.getDeclaringClass().isInterface();
+  }
+  
+ 该方法返回值为true的情况，按照目前java的modifier种类，只有一种可能就是modifier为public default的时候。interface中所有的方法默认的modifier都是public
+ abstract，在jdk1.8以后，引入了default修饰符，表示接口中的默认方法，该方法是可以有方法体的。
