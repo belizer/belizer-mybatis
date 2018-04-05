@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper>
+    <select id="selectById" resultType="com.belizer.mybatis.test.entity.Test">
+        select * from test;
+    </select>
+</mapper>
