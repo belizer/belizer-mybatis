@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="v1.com.belizer.mybatis.test.TestMapper">
+    <select id="selectById" resultType="v1.com.belizer.mybatis.test.entity.Test">
+        select * from test where id=?
+    </select>
+
+    <select id="selectAll" resultType="v1.com.belizer.mybatis.test.entity.Test">
+        select * from test
+    </select>
+</mapper>
